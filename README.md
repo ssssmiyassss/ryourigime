@@ -12,6 +12,12 @@ Python 3.8.8のように，バージョンが表示されたら成功。
 
 コマンドが見つかりません等のメッセージが出たら，環境変数を設定してPATHを通す。
 
+3. Anaconda promptで以下を実行し，Anacondaをupdateする。
+```
+conda update --prefix [anacondaがインストールされているフォルダ] anaconda
+```
+
+
 # 実行
 コマンドラインで，以下のファイルが入っているディレクトリに移動。
 ```
