@@ -50,30 +50,26 @@ canvas.place(x=textwnd_sizex, y=offset_sizey)
 img0 = tk.PhotoImage(file="image_staub\\1.png")
 image_on_canvas = canvas.create_image(0, 0, image=img0, anchor=tk.NW)
 #####################################################
+
+# ボタンが押されたときの振る舞いテンプレ
+def showmenu_button( list_tmpl=[], label = tk.Label(), shurui="", image_id=tk.Canvas() ):
+  rand = random.randint(0,len(list_tmpl)-1) # 0～len(list)までの乱数を決める。
+  label.config(text=shurui+"="+str(list_tmpl[rand]))# ラベルの更新
+  label.grid()#ラベルの表示
+  page = int( moji_split( str(list_tmpl[ rand]) )[2] )
+  imgname = "image_"+shurui+"\\"+str(page)+".png"
+  print(shurui+",page={}".format(page)+", "+imgname)
+  img = tk.PhotoImage(file=imgname)
+  canvas.itemconfig( image_id, image=img)
+
+
 # ビストロのボタンが押されたとき
 def showmenu_button1():
-  rand1 = random.randint(0,len(list_bistro)-1) # 0～len(list)までの乱数を決める。
-  moji1 = str(list_bistro[rand1]).replace('\n','')
-  label1.config(text="ビストロ="+moji1)# ラベルの更新
-  label1.grid()#ラベルの表示
-  page1 = int( moji_split( str(list_bistro[rand1]) )[2] )
-  print("bistro,page={}".format(page1))
-  img1name = "image_bistro\\"+str(page1)+".png"
-  print(img1name)
-  img1 = tk.PhotoImage(file=img1name)
-  canvas.itemconfig( image_on_canvas, image=img1)
+  showmenu_button(list_bistro,label1,"bistro",image_on_canvas)
 
 # ストウブのボタンが押されたとき
 def showmenu_button2():
-  rand2 = random.randint(0,len(list_staub)-1) # 0～len(list)までの乱数を決める。
-  label2.config(text="ストウブ="+str(list_staub[ rand2]))# ラベルの更新
-  label2.grid()#ラベルの表示
-  page2 = int( moji_split( str(list_staub[ rand2]) )[2] )
-  print("staub,page={}".format(page2))
-  img2name = "image_staub\\"+str(page2)+".png"
-  print(img2name)
-  img2 = tk.PhotoImage(file=img2name)
-  canvas.itemconfig( image_on_canvas, image=img2)
+  showmenu_button(list_staub,label2,"staub",image_on_canvas)
 #####################################################
 
 
