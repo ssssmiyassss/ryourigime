@@ -1,6 +1,6 @@
 import random
 import tkinter as tk # Tkinterモジュールのインポート
-
+from PIL import Image, ImageTk
 #####################################################
 # 2021-07-19 16:57:06
 # hoge
@@ -47,7 +47,9 @@ windsizey = offset_sizey + photownd_sizey
 root.minsize(windsizex,windsizey)
 canvas = tk.Canvas(root, width=photownd_sizex, height=photownd_sizey, bg="white")
 canvas.place(x=textwnd_sizex, y=offset_sizey)
-img0 = tk.PhotoImage(file="image_staub\\1.png")
+# img0 = tk.PhotoImage(file="image_staub\\1.png")
+image0 = Image.open("image_staub\\30.jpg")
+img0 = ImageTk.PhotoImage(image0)
 image_on_canvas = canvas.create_image(0, 0, image=img0, anchor=tk.NW)
 #####################################################
 
@@ -57,10 +59,11 @@ def showmenu_button( list_tmpl=[], label = tk.Label(), shurui="", image_id=tk.Ca
   label.config(text=shurui+"="+str(list_tmpl[rand]))# ラベルの更新
   label.grid()#ラベルの表示
   page = int( moji_split( str(list_tmpl[ rand]) )[2] )
-  imgname = "image_"+shurui+"\\"+str(page)+".png"
+  imgname = "image_"+shurui+"\\"+str(page)+".jpg"
   print(shurui+",page={}".format(page)+", "+imgname)
-  img = tk.PhotoImage(file=imgname)
-  canvas.itemconfig( image_id, image=img)
+  image_jpg = Image.open(imgname)
+  img_jpg = ImageTk.PhotoImage(image_jpg)
+  canvas.itemconfig( image_id, image=img_jpg)
 
 
 # ビストロのボタンが押されたとき
