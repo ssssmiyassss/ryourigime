@@ -23,13 +23,13 @@ with open("staub.txt" ,'r',encoding="utf-8_sig") as file_staub:
 # ビストロのボタンが押されたとき
 def showmenu_button1():
   rand1 = random.randint(0,len(list_bistro)-1) # 0～len(list)までの乱数を決める。
-  label1.config(text="ビストロ="+str(list_bistro[rand1]))# ラベルの作成
+  label1.config(text="ビストロ="+str(list_bistro[rand1]))# ラベルの更新
   label1.grid()#ラベルの表示
 
 # ストウブのボタンが押されたとき
 def showmenu_button2():
   rand2 = random.randint(0,len(list_staub)-1) # 0～len(list)までの乱数を決める。
-  label2.config(text="ストウブ="+str(list_staub[ rand2]))# ラベルの作成
+  label2.config(text="ストウブ="+str(list_staub[ rand2]))# ラベルの更新
   label2.grid()#ラベルの表示
 #####################################################
 
