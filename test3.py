@@ -62,7 +62,7 @@ def showmenu_button( list_tmpl=[], label = tk.Label(), shurui="", image_id=tk.Ca
   imgname = "image_"+shurui+"\\"+str(page)+".jpg"
   print(shurui+",page={}".format(page)+", "+imgname)
   image_jpg = Image.open(imgname)
-  img_jpg = ImageTk.PhotoImage(image_jpg)
+  img_jpg = ImageTk.PhotoImage(image_jpg) # fixme !!
   canvas.itemconfig( image_id, image=img_jpg)
 
 
