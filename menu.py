@@ -27,7 +27,7 @@ list_staub = []
 with open("staub.txt" ,'r',encoding="utf-8_sig") as file_staub:
   list_staub  = file_staub.readlines()
 
-print("minimum version 2021-07-23 16:49:29")
+print("this is minimum version 2021-07-23 16:49:29")
 
 #####################################################
 
@@ -60,11 +60,11 @@ def showmenu_button( list_tmpl=[], label = tk.Label(), shurui="" ):
 
 # ビストロのボタンが押されたとき
 def showmenu_button1():
-  showmenu_button(list_bistro,label1,"bistro",image_on_canvas)
+  showmenu_button(list_bistro,label1,"bistro")
 
 # ストウブのボタンが押されたとき
 def showmenu_button2():
-  showmenu_button(list_staub,label2,"staub",image_on_canvas)
+  showmenu_button(list_staub,label2,"staub")
 #####################################################
 
 
