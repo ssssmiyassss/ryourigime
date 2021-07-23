@@ -53,8 +53,8 @@ def showmenu_button( list_tmpl=[], label = tk.Label(), shurui="" ):
   rand = random.randint(0,len(list_tmpl)-1) # 0～len(list)までの乱数を決める。
   label.config(text=shurui+"="+str(list_tmpl[rand]))# ラベルの更新
   label.grid()#ラベルの表示
-  page = int( moji_split( str(list_tmpl[ rand]) )[2] )
-  imgname = "image_"+shurui+"\\"+str(page)+".jpg"
+  # page = int( moji_split( str(list_tmpl[ rand]) )[2] )
+  # imgname = "image_"+shurui+"\\"+str(page)+".jpg"
   # print(shurui+",page={}".format(page)+", "+imgname)
 
 
