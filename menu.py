@@ -55,7 +55,7 @@ def showmenu_button( list_tmpl=[], label = tk.Label(), shurui="" ):
   label.grid()#ラベルの表示
   page = int( moji_split( str(list_tmpl[ rand]) )[2] )
   imgname = "image_"+shurui+"\\"+str(page)+".jpg"
-  print(shurui+",page={}".format(page)+", "+imgname)
+  # print(shurui+",page={}".format(page)+", "+imgname)
 
 
 # ビストロのボタンが押されたとき
