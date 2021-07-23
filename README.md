@@ -23,12 +23,11 @@ conda update --prefix [anacondaがインストールされているフォルダ]
 ```
 bistro.txt
 staub.txt
-test.py
-test2.py
+menu.py
 ```
 そのあと，以下を実行。
 ```
-> python test2.py
+> python menu.py
 ```
 
 # 使い方
