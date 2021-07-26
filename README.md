@@ -33,4 +33,5 @@ menu.py
 # 使い方
 ![例](https://user-images.githubusercontent.com/35482155/126108072-faae0ffc-200e-4c32-b1e0-5abed0d18dc7.jpg)
 ![例](https://user-images.githubusercontent.com/35482155/126919292-a80c3724-225f-47b3-8d84-356bb2a55480.png)
+
 上記の各ボタンを押すと，ランダムにメニューが変わる。
