@@ -23,6 +23,8 @@ conda update --prefix [anacondaがインストールされているフォルダ]
 ```
 bistro.txt
 staub.txt
+shuttle.txt
+frying.txt
 menu.py
 ```
 そのあと，以下を実行。
