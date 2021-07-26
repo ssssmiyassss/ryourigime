@@ -2,7 +2,7 @@ import random
 import tkinter as tk # Tkinterモジュールのインポート
 #####################################################
 # 2021-07-19 16:57:06
-# hoge
+# for debugging
 def hoge( number ) :
   print("hoge {:0=10}".format(number))
 
@@ -16,18 +16,29 @@ def moji_split(zenbun_str):
 #####################################################
 
 
+print("this program was updated at 2021-07-26 09:39:22")
 
-# テキストファイルをオープンして，list_bistroに格納。
+# テキストファイルをオープンして，listに格納。
 list_bistro = []
 with open("bistro.txt",'r',encoding="utf-8_sig") as file_bistro:
   list_bistro = file_bistro.readlines()
+  print("read bistro.txt....")
 
 list_staub = []
-# テキストファイルをオープンして，list_bistroに格納。
 with open("staub.txt" ,'r',encoding="utf-8_sig") as file_staub:
   list_staub  = file_staub.readlines()
+  print("read staub.txt....")
 
-print("this is minimum version 2021-07-23 16:49:29")
+list_shuttle = []
+with open("shuttle.txt" ,'r',encoding="utf-8_sig") as file_shuttle:
+  list_shuttle  = file_shuttle.readlines()
+  print("read shuttle.txt....")
+
+list_frying = []
+with open("frying.txt" ,'r',encoding="utf-8_sig") as file_frying:
+  list_frying  = file_frying.readlines()
+  print("read frying.txt....")
+
 
 #####################################################
 
@@ -65,6 +76,14 @@ def showmenu_button1():
 # ストウブのボタンが押されたとき
 def showmenu_button2():
   showmenu_button(list_staub,label2,"staub")
+
+# シャトルシェフのボタンが押されたとき
+def showmenu_button3():
+  showmenu_button(list_shuttle,label3,"shuttle")
+
+# フライパンのボタンが押されたとき
+def showmenu_button4():
+  showmenu_button(list_frying,label4,"frying")
 #####################################################
 
 
@@ -78,6 +97,14 @@ label1 = tk.Label(root, text=" ")# ラベルの作成
 button2 = tk.Button(root, text="ストウブのメニューを決める",width=40, command=showmenu_button2)
 button2.grid() # ボタンの表示
 label2 = tk.Label(root, text=" ")# ラベルの作成
+
+button3 = tk.Button(root, text="シャトルシェフのメニューを決める",width=40, command=showmenu_button3)
+button3.grid() # ボタンの表示
+label3 = tk.Label(root, text=" ")# ラベルの作成
+
+button4 = tk.Button(root, text="フライパンのメニューを決める",width=40, command=showmenu_button4)
+button4.grid() # ボタンの表示
+label4 = tk.Label(root, text=" ")# ラベルの作成
 
 
 
