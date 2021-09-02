@@ -31,3 +31,11 @@ menu.py
 ![例](https://user-images.githubusercontent.com/35482155/126919292-a80c3724-225f-47b3-8d84-356bb2a55480.png)
 
 上記の各ボタンを押すと，ランダムにメニューが変わる。
+
+
+# 2021-09-02 12:22:56 test
+
+sourcetreeから githubへのpushテスト。
+
+認証をpasswordからtokenに変更。
+
